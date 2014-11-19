@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title dir="ltr">The name&rsquo;s Kizaan; Kizaan Knapp. I market things.</title>
+		<meta name="description" content="I market products and companies. I’m passionate about all things marketing; a lover of all mystical creatures, robots, my daughter; and I do enjoy long walks on the beach." />
+
+		<link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css' />
+		<link href="stylesheets/app.css" rel="stylesheet" type="text/css" />
+
+		<script>
+			document.addEventListener("touchstart", function(){},false);
+		</script>
+
+		<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+	</head>
+	<body>
+	    <header>
+			<h1>My writing</h1>
+			<p intro>Here are some <strong>recent samples of my writing</strong>.</p>
+			<p>Also, <a href="work.html">see some of my work</a> samples, <a href="mailto:kizaan@gmail.com">email me</a> sometime if you&rsquo;re interested in chatting; or <a href="index.html#resume">check out my resume</a>.</p>
+	    </header>
+
+		<div class="hdr">
+			<h2>
+				Kizaan Knapp:
+				&nbsp;
+				<a href="work.html">Work</a>
+				&nbsp;
+				<a href="index.html">Home</a>
+				&nbsp;
+				<a href="#">Top</a>
+			</h2>
+		</div>
+
+	    <div class="cf" works narrow id="resume">
+	    	
+			<article>
+				<h2>
+					Some writing samples:
+				</h2>
+				<ul>
+					<li><strong>Sample Blog Post:</strong> <a href="http://www.fonteva.com/3-important-considerations-when-building-a-social-community/" target="_blank">3 Important Considerations When Building A Social Community</a></li>
+					<li><a href="/email.html" target="_blank">Sample Newsletter</a></li>
+					<li><strong>Sample Press Release:</strong> <a href="http://www.browsermedia.com/news/articles/2012/05/17/browsermedia-is-pleased-to-launch-a-new-site-for-the-chevy-chase-land-company" target="_blank">BrowserMedia Is Pleased to Launch a New Site for The Chevy Chase Land Company</a></li>
+					<li>
+						<strong>NPR BrowserMedia:<div class="block"></div>
+						<a href="http://cl.ly/GByN" class="audio" target="_blank">Spot One</a>&nbsp;&nbsp;&nbsp;<a href="http://cl.ly/GPx6" class="audio" target="_blank">Spot Two</a></strong>
+					</li>
+					<li>
+						<strong>Sample Web Copy:</strong>
+						<p>
+							Why we do what we do:</p>
+						<p>In an increasingly complex online and multichannel environment, our team translates functional and business requirements into a detailed project plan that leverages best-of-breed interactive technologies. We realize that project success is not just a function of the technology or the design, but also of a solid development and delivery process. That is why we provide you with the key ingredients and customizable tools to streamline your business operations, improve collaboration, increase retention and build brand advocacy.</p>
+						<p>Our digital strategies are based on insight that ensures the digital and communications solutions are aligned to your business objectives, and in tune with your marketing strategy. We also craft an experience that your users will come back to.</p>
+					</li>
+					<li>
+						<strong>Sample Proposal:</strong>
+							<p>To meet the goals outlined by The [name withheld] SOM, we believe the website should:</p>
+							<ul>
+								<li>Highlight the integrated core curriculum that sets the school apart from leading competitors by featuring an integrated website that captures this core theme;</li>
+								<li>Take advantage of technology to emphasize the forward-thinking atmosphere of the school and appeal to prospective students, while still remaining user-friendly for the widest possible audience;</li>
+								<li>Place greater emphasis on the multidisciplinary approach to learning that is integral to [name withheld] SOM experience;</li>
+							</ul>
+							<p>More effectively use consistent photography and video to showcase the stories and people who make [name withheld] SOM unique.</p>
+							<p>We recommend that the site present a visual message of modernity, simplicity and sophistication, while focusing on the integrated core curriculum and how it prepares graduates to apply it to a real world situation. Type should be easy to read and pages should utilize a grid structure. Pages should be uncluttered but informational, and images should be powerful and consistently treated throughout the site. All of this should incorporate the current branding standards (logos and colors) already developed for the [name withheld] School of Management as well as the pending positioning statement.</p>
+							<p>[name withheld] SOM teaches management fundamentals in an integrated way&mdash;the way successful managers must function every day. We propose investigating ways to integrate this message more thoroughly throughout the site, emphasizing the cross-functionality, problem solving and broad-based learning in more areas.</p>
+							<p>Associate images with quotes and testimonial statements from the student or faculty member depicted. Questions or statements relevant to today&rsquo;s real word business issues could be posted throughout the site, and linked to relevant blogs. Many ideas and communication strategies should be evaluated and explored together, but these initial ideas are an example of how we might begin our creative process.</p>
+					</li>
+					<li>
+						<strong>Sample Copy/Editorial Calendar:</strong> <a href="http://brainof.kizaan.com/" target="_blank">Internal Blog/Social Media Calendar to Creating Employee Engagement and Participation</a>
+					</li>
+				</ul>
+			</article>
+
+	    </div>
+
+	    <a href="#" top>Back to top</a>
+
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var body = $('body');
+			    var hdr = $('header');
+			    var hdrSticky = $('.hdr');
+			    var hdrTop = hdr.innerHeight() + 50;
+			    var win = $(window);
+			    win.scroll(function(e){
+			        var scrollTop = win.scrollTop();
+			        //console.log(hdrTop,scrollTop);
+			        if(scrollTop >= hdrTop){
+			            hdrSticky.addClass('sticky');
+						body.addClass('pad');
+			        }else if(hdrSticky.hasClass('sticky')){
+			            hdrSticky.removeClass('sticky');
+			            body.removeClass('pad');
+			        }
+			    });
+			});
+		</script>
+
+	</body>
+</html>

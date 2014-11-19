@@ -141,6 +141,7 @@ header h1, header p {
 	top: 25px;
 }
 header h1 {
+	color: white;
 	font-size: 4em;
 }
 header h1 a {
@@ -203,6 +204,9 @@ small span + span {
 ol, ul {
 	padding: 0;
 }
+ul ul {
+	padding: 1em 0 2em;
+}
 li {
 	border-left: 3px solid #efefef;
 	line-height: 1.2;
@@ -256,6 +260,10 @@ article {
 }
 article + article {
 	margin-top: 0;
+}
+[narrow] article {
+	float: none;
+	padding: 0;
 }
 .r {
 	float: right;

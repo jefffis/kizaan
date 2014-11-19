@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title dir="ltr">The name&rsquo;s Kizaan; Kizaan Knapp. I market things.</title>
+		<meta name="description" content="I market products and companies. I’m passionate about all things marketing; a lover of all mystical creatures, robots, my daughter; and I do enjoy long walks on the beach." />
+
+		<link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css' />
+		<link href="stylesheets/app.css" rel="stylesheet" type="text/css" />
+
+		<script>
+			document.addEventListener("touchstart", function(){},false);
+		</script>
+
+		<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+	</head>
+	<body>
+	    <header>
+			<h1>My work</h1>
+			<p intro>Here are some <strong>samples of my recent</strong> work.</p>
+			<p>Also, <a href="writing.html">read some of my writing</a> samples, <a href="mailto:kizaan@gmail.com">email me</a> sometime if you&rsquo;re interested in chatting; or <a href="index.html#resume">check out my resume</a>.</p>
+	    </header>
+
+		<div class="hdr">
+			<h2>
+				Kizaan Knapp:
+				&nbsp;
+				<a href="writing.html">Writing</a>
+				&nbsp;
+				<a href="index.html">Home</a>
+				&nbsp;
+				<a href="#">Top</a>
+			</h2>
+		</div>
+
+	    <div class="cf" works narrow id="resume">
+	    	
+			<article>
+				<h2>
+					Check out some of my work:
+					<small>(all open in new window)</small>
+				</h2>
+				<ul>
+					<li><a href="BM-Marketing-Plan-2012.doc" target="_blank">BrowserMedia Marketing<br />Plan 2012<span>.doc (rough draft)</span></a></li>
+					<li><a href="BM-Tradeshow-Worksheet.doc" target="_blank">BrowserMedia Tradeshow Worksheet<span>.doc (rough draft)</span></a></li>
+					<li><a href="BM-MarCom-Calendar-2012.xls" target="_blank">BrowserMedia MarCom<br />Calendar 2012<span>.xls (rough draft)</span></a></li>
+					<li><a href="BM-Webinar-Strategy-and-Schedule.doc" target="_blank">BrowserMedia Webinar<br />Strategy &amp; Schedule<span>.doc (rough draft)</span></a></li>
+					<li><a href="BM-Tradeshow-Budget-&-Schedule.xlsx" target="_blank">BrowserMedia Tradeshow<br />Budget &amp; Schedule<span>.xls (rough draft)</span></a></li>
+					<li><a href="ISEP-SWOT-Analysis.docx" target="_blank">ISEP SWOT Analysis<span>.doc (rough draft)</span></a></li>
+					<li><a href="Inbound-Marketing-Traffic-and-Leads-Calculator.png" target="_blank">Inbound Marketing Traffic &amp;<br />Leads Calculator<span>.png</span></a></li>
+					<li><a href="/isep" target="_blank">Custom Facebook Tab <br /><span>designed to drive traffic for ISEP</span></a></li>
+					<li><a href="Channel-Partner-Brochure.pdf" target="_blank">Channel Partner Brochure<span>.pdf</span></a></li>
+				</ul>
+			</article>
+
+	    </div>
+
+	    <a href="#" top>Back to top</a>
+
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var body = $('body');
+			    var hdr = $('header');
+			    var hdrSticky = $('.hdr');
+			    var hdrTop = hdr.innerHeight() + 50;
+			    var win = $(window);
+			    win.scroll(function(e){
+			        var scrollTop = win.scrollTop();
+			        //console.log(hdrTop,scrollTop);
+			        if(scrollTop >= hdrTop){
+			            hdrSticky.addClass('sticky');
+						body.addClass('pad');
+			        }else if(hdrSticky.hasClass('sticky')){
+			            hdrSticky.removeClass('sticky');
+			            body.removeClass('pad');
+			        }
+			    });
+			});
+		</script>
+
+	</body>
+</html>
