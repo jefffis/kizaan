@@ -304,6 +304,12 @@ body {
 .pad {
 	padding-bottom: 0;
 }
+header {
+	padding-top: 3em;
+}
+header:before {
+	display: none;
+}
 header:after {
 	height: 40px;
 }
