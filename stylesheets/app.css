@@ -90,15 +90,10 @@ header:before {
 
 	transform: rotate(-2.5deg);
 
-	/* Translate -100% to move off screen
-    -webkit-transform: translateY(-1000%);
-        -ms-transform: translateY(-1000%);
-            transform: translateY(-1000%); */
-
-    /* Animations
+    /* Animations */
     -webkit-transition: all 300ms ease-in-out;
        -moz-transition: all 300ms ease-in-out;
-            transition: all 300ms ease-in-out; */
+            transition: all 300ms ease-in-out;
 }
 .hdr:after {
 	content: "";
@@ -113,11 +108,6 @@ header:before {
 .sticky {
 
 	bottom: -2.5%;
-
-	/* Translate back to 0%;
-    -webkit-transform: translateY(0%);
-        -ms-transform: translateY(0%);
-            transform: translateY(0%); */
 
 }
 .sticky h2 {
