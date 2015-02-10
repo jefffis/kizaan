@@ -41,6 +41,14 @@ strong {
 	color: #36011B;
 }
 
+hr {
+	background: #efefef;
+	border: 0;
+	clear: both;
+	height: 3px;
+	margin: 3em -100%;
+}
+
 /*.pad {
 	padding-bottom: 5em;
 }*/
@@ -185,9 +193,11 @@ small a, small span {
 	margin-right: 1em;
 }
 small span {
+	display: none;
 	opacity: .65;
 }
 small span + span {
+	display: inline-block;
 	margin-right: 0;
 	opacity: 1;
 }
@@ -244,6 +254,11 @@ li + li {
 
 @media screen and (min-width: 1100px){
 
+
+
+hr {
+	margin: 3em -100% 4em;
+}
 article {
 	float: left;
 	padding: 0 2em 5em 0;
