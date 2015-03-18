@@ -15,6 +15,9 @@ html, body {
 	color: #777;
 	overflow-x: hidden;
 }
+body {
+	padding-bottom: 5rem;
+}
 a {
 	border-bottom: 2px solid currentColor;
 	color: #FC56A9;
@@ -31,7 +34,7 @@ a:active {
 }
 h1, h2, h3, h4, [top] {
 	color: #36011B;
-	font-family: 'Permanent Marker', sans-serif;
+	font-family: 'Marvel', 'Permanent Marker', sans-serif;
 	line-height: 1.2;
 }
 h1, h2, h3, h4, p {
@@ -42,7 +45,8 @@ strong {
 }
 
 hr {
-	background: #efefef;
+	/*background: #efefef;*/
+	background: #FC56A9;
 	border: 0;
 	clear: both;
 	height: 3px;
@@ -57,28 +61,45 @@ hr {
 header, .hdr {
 	background: #FC56A9;
 	color: white;
-	padding: 6em 1.5em;
-	position: relative;
+	height: 100%;
+	/*padding: 2.5em;*/
+	position: fixed;
+	width: 40%;
+	max-width: 600px;
+	left: 0;
+	bottom: 0;
 	/*text-shadow: 0 1px 0 rgba(0,0,0,0.05), 1px 2px 0 rgba(0,0,0,0.035);*/
 	z-index: 2;
+}
+.dets, .nav {
+	position: fixed;
+	bottom: 4rem;
+	left: 2.5rem;
+	z-index: 100;
+}
+.nav {
+	display: block;
+	bottom: auto;
+	top: 2.5rem;
 }
 header:after {
 	content: "";
 	background: #FC56A9;
-	bottom: -2%;
+	/*box-shadow: 2px 0 0 #BD0661;*/
+	top: 0;
 	display: block;
-	height: 100px;
-	left: -5%;
+	height: 110%;
+	right: -10%;
 	position: absolute;
-	width: 150%;
+	width: 100px;
 	z-index: 1;
-	transform: rotate(-2.5deg);
+	transform: rotate(-5deg);
 }
 header:before {
 	content: "";
 	background: white;
 	top: -10%;
-	display: block;
+	display: none;
 	height: 100px;
 	left: -5%;
 	position: absolute;
@@ -87,12 +108,15 @@ header:before {
 	transform: rotate(-2.5deg);
 }
 .hdr {
+	display: none;
+
 	left: 0;
 	padding: 2em 1.5em;
 	position: fixed;
 	text-align: center;
 	bottom: -100%;
 	margin-left: -25%;
+	height: auto;
 	width: 150%;
 	z-index: 5;
 
@@ -114,18 +138,28 @@ header:before {
 	width: 150%;
 }
 .sticky {
-
 	bottom: -2.5%;
-
+	max-width: none;
 }
 .sticky h2 {
 	color: white;
 	line-height: 2;
 	margin-bottom: 0;
+	position: relative;
+	top: -10px;
 }
 .sticky h2 a {
 	color: white;
 }
+
+h2 a {
+	display: inline-block;
+	line-height: 1.5;
+}
+h2 a + a {
+	margin-left: 1rem;
+}
+
 header img {
 	display: block;
 	margin: auto;
@@ -145,6 +179,9 @@ header h1 {
 header h1 a {
 	cursor: default;
 	text-decoration: none;
+}
+header h1 a {
+	border: 0;
 }
 header h1 a:hover {
 	border-color: white;
@@ -166,13 +203,20 @@ header a, header strong {
 
 /*** resume ***/
 [works] {
+	/*display: none;*/
 	margin: auto;
 	max-width: 1100px;
-	padding: 8em 1.5em 0;
+	padding: 2.5em;
+
+	position: absolute;
+	right: 0;
+	top: 0;
+	max-width: 750px;
+	width: 55%;
 }
 article {
 	margin: auto;
-	max-width: 500px;
+	/*max-width: 500px;*/
 }
 article + article {
 	margin-top: 6em;
@@ -221,7 +265,7 @@ li + li {
 	background: #FC56A9;
 	border: 0;
 	color: white;
-	display: block;
+	display: none;
 	font-size: 2em;
 	margin: 2em -1.5em 0;
 	padding: 2em;
@@ -235,6 +279,7 @@ li + li {
 	display: none;
 }
 
+/*
 @media screen and (min-width: 601px){
 
 .sticky {
@@ -317,6 +362,90 @@ header:before {
 }
 header:after {
 	height: 40px;
+}
+
+}
+*/
+
+.m-nav {
+	display: none;
+}
+
+@media screen and (min-width: 1500px){
+
+[works] {
+	right: 5%;
+}
+
+}
+
+@media screen and (min-width: 1600px){
+
+[works] {
+	right: auto;
+	left: 700px;
+}
+
+}
+
+@media screen and (max-width: 1250px){
+
+.nav {
+	display: none;
+}
+.dets, .m-nav {
+	margin: auto;
+	max-width: 700px;
+	padding: 1.5rem;
+}
+.m-nav {
+	padding: 0;
+}
+header h1, header p {
+	max-width: 700px;
+	padding: 0;
+	position: static;
+}
+.dets h2 a {
+	display: block;
+}
+.dets h2 a + a {
+	margin-left: 0;
+}
+.hdr {
+	display: block;
+	/*box-shadow: 0 -2px 0 #BD0661;*/
+}
+.m-nav {
+	display: block;
+	margin-top: 3rem;
+	/*text-align: center;*/
+}
+.dets {
+	padding-top: 5rem;
+}
+
+header, [works], .dets {
+	/*height: auto;*/
+	position: relative;
+	width: 100%;
+	left: auto;
+	right: auto;
+	top: auto;
+	bottom: auto;
+	max-width: none;
+}
+header:after {
+	/*box-shadow: 0 2px 0 #BD0661;*/
+	top: auto;
+	bottom: -2.5rem;
+	height: 100px;
+	width: 150%;
+	transform: rotate(-2.5deg);
+}
+[works] {
+	max-width: 700px;
+	padding: 8rem 1.5rem 0;
 }
 
 }
