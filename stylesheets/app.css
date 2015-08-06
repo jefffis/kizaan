@@ -11,13 +11,16 @@
 }
 
 html, body {
-	font: normal 100%/1.5 sans-serif;
+	font: normal 100%/1.5 'Helvetica Neue', Arial, sans-serif;
 	color: #777;
 	overflow-x: hidden;
 }
-body {
-	padding-bottom: 5rem;
+header small {
+	font-size: 16px;
 }
+/*body {
+	padding-bottom: 5rem;
+}*/
 a {
 	/*border-bottom: 2px solid currentColor;*/
 	color: #FC56A9;
@@ -31,6 +34,9 @@ a:active {
 	opacity: .65;
 	position: relative;
 	top: 1px;
+}
+h2 {
+	line-height: .95;
 }
 h1, h2, h3, h4, [top] {
 	color: #36011B;
@@ -175,6 +181,7 @@ header h1, header p {
 header h1 {
 	color: white;
 	font-size: 4em;
+	line-height: .95;
 }
 header h1 a {
 	cursor: default;
@@ -401,16 +408,29 @@ header:after {
 .m-nav {
 	padding: 0;
 }
-header h1, header p {
+header h1, header p, header small {
 	max-width: 700px;
 	padding: 0;
 	position: static;
 }
+header small {
+	display: block;
+	margin: auto;
+	font-size: 16px;
+	padding-bottom: 1rem;
+	text-align: right;
+}
+.dets h2 {
+	padding-bottom: 2rem;
+}
 .dets h2 a {
 	display: block;
+	/*width: 25%;*/
+	float: left;
+	/*text-align: center;*/
 }
 .dets h2 a + a {
-	margin-left: 0;
+	margin-left: 2rem;
 }
 .hdr {
 	display: block;
@@ -446,6 +466,33 @@ header:after {
 [works] {
 	max-width: 700px;
 	padding: 8rem 1.5rem 0;
+}
+
+[top] {
+	display: block;
+}
+
+}
+
+@media screen and (max-width: 600px){
+
+.dets {
+	padding-top: 3rem;
+}
+.dets h2 {
+	padding-bottom: 3rem;
+}
+.dets h2 a {
+	display: block;
+	width: 50%;
+	float: left;
+	/*text-align: center;*/
+}
+.dets h2 a + a {
+	margin-left: 0;
+}
+.dets h2 a + a + a {
+	margin-top: 1rem;
 }
 
 }
