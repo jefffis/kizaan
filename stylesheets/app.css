@@ -333,9 +333,12 @@ li + li {
 	border: 1px solid #efefef;
 	margin-top: 1.5rem;
 	/*border-radius: 3px;*/
-	max-height: 10000px;
+	/*max-height: 10000px;*/
 	padding: 1.5rem;
 	position: relative;
+}
+.hidden-text.show {
+	display: block;
 }
 .hidden-text:before {
 	content: "";

@@ -185,12 +185,12 @@
 				hideToggleable = $('.hidden-text button');
 
 			toggleLinks.on('click', function() {
-				$(this).siblings('div').slideToggle(350);
+				$(this).siblings('div').toggleClass('show');
 				$(this).toggleClass('show');
 			});
 
 			hideToggleable.on('click', function() {
-				$(this).parent().slideUp(125);
+				$(this).parent().removeClass('show');
 				$(this).parent().parent().find('a[data-toggle]').removeClass('show');
 			});
 		});
