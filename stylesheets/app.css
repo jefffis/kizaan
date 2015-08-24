@@ -288,13 +288,15 @@ li + li {
 }
 
 [top] {
-	background: #FC56A9;
+	/*background: #FC56A9;*/
+	background: #0B344A;
 	border: 0;
-	color: white;
+	/*color: white;*/
+	color: #FFF6C9;
 	display: none;
 	font-size: 2em;
 	margin: 2em -1.5em 0;
-	padding: 2em;
+	padding: 1em;
 	text-align: center;
 }
 [top]:active {
@@ -312,11 +314,11 @@ li + li {
 	transition: max-height .25s ease-in-out;
 }*/
 .hidden-text {
-	/*background: #efefef;*/
+	/*background: rgba(0,0,0,0.01);*/
 	display: none;
 	border: 1px solid #efefef;
 	margin-top: 1.5rem;
-	border-radius: 3px;
+	/*border-radius: 3px;*/
 	max-height: 10000px;
 	overflow: auto;
 	padding: 1.5rem;
@@ -349,10 +351,10 @@ li + li {
 	height: 1.5rem;
 	width: 1.5rem;
 	border-radius: 100%;
-	font-family: sans-serif;
+	font-family: 'Marvel', 'Permanent Marker', sans-serif;
 	content: counter(this);
 	text-align: center;
-	line-height: 25.5px;
+	line-height: 24.5px;
 }
 .hidden-text .rec {
 	color: #FF3C33;
@@ -365,10 +367,10 @@ li + li {
 
 a[target="_blank"] {
 	background-image: url(https://cdn0.iconfinder.com/data/icons/arrows-android-l-lollipop-icon-pack/24/right_up-128.png);
-	background-position: 95% 50%;
+	background-position: 97.5% 50%;
 	background-repeat: no-repeat;
 	background-size: 12px;
-	padding-right: 1.5rem;
+	padding-right: 1.25rem;
 }
 
 /*
