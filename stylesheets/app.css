@@ -364,9 +364,11 @@ li + li {
 }
 
 a[target="_blank"] {
-	background: url(https://cdn0.iconfinder.com/data/icons/arrows-android-l-lollipop-icon-pack/24/right_up-128.png) no-repeat center right;
+	background-image: url(https://cdn0.iconfinder.com/data/icons/arrows-android-l-lollipop-icon-pack/24/right_up-128.png);
+	background-position: 95% 50%;
+	background-repeat: no-repeat;
 	background-size: 12px;
-	padding-right: 1rem;
+	padding-right: 1.5rem;
 }
 
 /*
