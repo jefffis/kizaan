@@ -42,7 +42,7 @@ a:active {
 h2 {
 	line-height: .95;
 }
-h1, h2, h3, h4, [top] {
+h1, h2, h3, h4 {
 	/*color: #36011B;*/
 	color: #0B344A;
 	font-family: 'Marvel', 'Permanent Marker', sans-serif;
@@ -213,6 +213,11 @@ header a, header strong {
 	font-size: 2.25em;
 	line-height: 1.2;
 }
+.intro {
+	font-size: 1.5em;
+	line-height: 1.35;
+	margin-bottom: 2rem;
+}
 
 
 /*** resume ***/
@@ -283,24 +288,33 @@ li {
 	padding-left: 1.5em;
 	/*color: #666;*/
 }
+/*li > a:first-child {
+	display: block;
+}*/
 li + li {
 	margin-top: 1.5em;
 }
 
 [top] {
 	/*background: #FC56A9;*/
-	background: #0B344A;
-	border: 0;
+	border-top: 1px solid #efefef;
+	/*border: 0;*/
 	/*color: white;*/
-	color: #FFF6C9;
+	/*color: #FFF6C9;*/
+	color: #111;
 	display: none;
 	font-size: 2em;
-	margin: 2em -1.5em 0;
+	margin: 3em -1.5em 0;
 	padding: 1em;
 	text-align: center;
+	font-size: 1rem;
+}
+[top]:hover {
+	border-top: 1px solid #efefef;
 }
 [top]:active {
-	opacity: .5;
+	top: 0;
+	color: #777;
 }
 
 .hide {
@@ -320,8 +334,18 @@ li + li {
 	margin-top: 1.5rem;
 	/*border-radius: 3px;*/
 	max-height: 10000px;
-	overflow: auto;
 	padding: 1.5rem;
+	position: relative;
+}
+.hidden-text:before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: -10px;
+	left: 1rem;
+	border-bottom: 10px solid #efefef;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
 }
 .hidden-text h3 {
 	/*color: #111;*/
@@ -359,18 +383,58 @@ li + li {
 .hidden-text .rec {
 	color: #FF3C33;
 }
-.hidden-text hr {
-	margin: 1em -100%;
+.hidden-text ol li hr {
+	margin: 1.125em -1.5em 1em -4em;
 	background: #efefef;
 	height: 1px;
 }
+hr.br {
+	background: white;
+	margin: 0;
+	height: 8px;
+}
+.hidden-text button {
+	background: none;
+	border: 0;
+	color: #111;
+	text-align: right;
+	width: 100%;
+	display: block;
+	margin-top: 1rem;
+	outline: none;
+}
+.hidden-text button span {
+	display: inline-block;
+	color: #111;
+	/*background: #0B344A;*/
+	border: 1px solid #efefef;
+	padding: .5rem;
+	line-height: 1;
+}
+.hidden-text button span:active {
+	box-shadow: 0 0 0 2px #FFF6C9;
+	color: #777;
+}
 
-a[target="_blank"] {
+a[target="_blank"]:after, a[data-toggle]:after {
+	display: inline-block;
+	position: relative;
+    width: 18px;
+    height: 12px;
 	background-image: url(https://cdn0.iconfinder.com/data/icons/arrows-android-l-lollipop-icon-pack/24/right_up-128.png);
-	background-position: 97.5% 50%;
+	background-position: 100% 50%;
 	background-repeat: no-repeat;
 	background-size: 12px;
-	padding-right: 1.25rem;
+	/*padding-right: 1.25rem;*/
+	content: "";
+}
+a[data-toggle]:after {
+	background-image: url(https://cdn0.iconfinder.com/data/icons/glyphpack/26/double-arrow-down-128.png);
+	background-size: 10px;
+}
+a[data-toggle].show:after {
+	transform: rotate(180deg);
+	left: 8px;
 }
 
 /*
@@ -504,7 +568,7 @@ header small {
 	display: block;
 	margin: auto;
 	font-size: 16px;
-	padding-bottom: 1rem;
+	padding-bottom: 2rem;
 	text-align: right;
 }
 .dets h2 {
