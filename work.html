@@ -8,7 +8,6 @@
 		<title dir="ltr">The name&rsquo;s Kizaan; Kizaan Knapp. I market things.</title>
 		<meta name="description" content="I market products and companies. I’m passionate about all things marketing; a lover of all mystical creatures, robots, my daughter; and I do enjoy long walks on the beach." />
 
-		<link href='http://fonts.googleapis.com/css?family=Marvel:700' rel='stylesheet' type='text/css'>
 		<link href="stylesheets/app.css" rel="stylesheet" type="text/css" />
 
 		<script>
@@ -23,9 +22,12 @@
 	
 				<small><a href="/">back to Home</a></small>
 
-				<h1>My work</h1>
-				<p intro>Here are some <strong>samples of my recent</strong> work and writing.</p>
-				<p><!-- Also, <a href="writing.html">read some of my writing</a> samples,  --><a href="mailto:kizaan@gmail.com">Email me</a> sometime if you&rsquo;re interested in chatting; or <a href="index.html#resume">check out my resume</a>.</p>
+				<h1>Kizaan Knapp: Work</h1>
+				<!-- <p intro>Here are some <strong>samples of my recent</strong> work and writing.</p> -->
+				<!-- <p><a href="mailto:kizaan@gmail.com">Email me</a> sometime if you&rsquo;re interested in chatting; or <a href="index.html#resume">check out my resume</a>.</p> -->
+				<p>
+					All my work samples have original content written by me, video produced and designed by me and voice over provided by me. I have more samples if there is anything specific you would like to see.
+				</p>
 				<!-- <div class="m-nav">
 					<h2>
 						<a href="/#resume">Experience</a>
@@ -62,9 +64,28 @@
 			<article>
 				<h2>
 					Check out some of my work:
-					<small>(all open in new window)</small>
+					<!-- <small>(all open in new window)</small> -->
 				</h2>
 				<ul>
+					<li>
+						<a data-toggle>[PRODUCT DEVELOPMENT]</a>
+						Acquia Lift is branded as tool for marketers to use without much technical or dev help from you team.
+						<div class="hidden-text">
+							<h3>Actual Experience:</h3>
+							<ol>
+								<li>
+									<strong>Acquia Lift is not very user-friendly:</strong> especially when first trying to create campaigns. It will take multiple training sessions for casual users to understand and be ready to use the tool. Having developer resources is a must during initial implementation and set-up.
+									<hr />
+									<strong class="rec">Recommendation:</strong> Create a 15/30 day implementation plan. Provide good/educational documentation (best practices, In-App Help / Guidance tutorials) using a project management app (like Basecamp) during the implementation phase to support Lift setup and on-boarding.
+								</li>
+								<li>
+									<strong>Acquia Lift is not very user-friendly:</strong> especially when first trying to create campaigns. It will take multiple training sessions for casual users to understand and be ready to use the tool. Having developer resources is a must during initial implementation and set-up.
+									<hr />
+									<strong class="rec">Recommendation:</strong> Create a 15/30 day implementation plan. Provide good/educational documentation (best practices, In-App Help / Guidance tutorials) using a project management app (like Basecamp) during the implementation phase to support Lift setup and on-boarding.
+								</li>
+							</ol>
+						</div>
+					</li>
 					<li>
 						<a href="https://youtu.be/wXNeO06u-v0" target="_blank">[WEBINAR]</a> Creating an Actionable Customer Journey Map
 					</li>
@@ -86,13 +107,7 @@
 					<li>
 						<a href="http://www.balanceinteractive.com/blog/are-you-listening-power-ethnographic-research" target="_blank">[BLOG]</a> Are you listening? The Power of Ethnographic Research
 					</li>
-					<!-- <li>
-						<a href="" target="_blank"></a>
-					</li>
-					<li>
-						<a href="" target="_blank"></a>
-					</li> -->
-					<li><a href="BM-Marketing-Plan-2012.doc" target="_blank">BrowserMedia Marketing<br />Plan 2012<span>.doc (rough draft)</span></a></li>
+					<!-- <li><a href="BM-Marketing-Plan-2012.doc" target="_blank">BrowserMedia Marketing<br />Plan 2012<span>.doc (rough draft)</span></a></li>
 					<li><a href="BM-Tradeshow-Worksheet.doc" target="_blank">BrowserMedia Tradeshow Worksheet<span>.doc (rough draft)</span></a></li>
 					<li><a href="BM-MarCom-Calendar-2012.xls" target="_blank">BrowserMedia MarCom<br />Calendar 2012<span>.xls (rough draft)</span></a></li>
 					<li><a href="BM-Webinar-Strategy-and-Schedule.doc" target="_blank">BrowserMedia Webinar<br />Strategy &amp; Schedule<span>.doc (rough draft)</span></a></li>
@@ -100,7 +115,7 @@
 					<li><a href="ISEP-SWOT-Analysis.docx" target="_blank">ISEP SWOT Analysis<span>.doc (rough draft)</span></a></li>
 					<li><a href="Inbound-Marketing-Traffic-and-Leads-Calculator.png" target="_blank">Inbound Marketing Traffic &amp;<br />Leads Calculator<span>.png</span></a></li>
 					<li><a href="/isep" target="_blank">Custom Facebook Tab <br /><span>designed to drive traffic for ISEP</span></a></li>
-					<li><a href="Channel-Partner-Brochure.pdf" target="_blank">Channel Partner Brochure<span>.pdf</span></a></li>
+					<li><a href="Channel-Partner-Brochure.pdf" target="_blank">Channel Partner Brochure<span>.pdf</span></a></li> -->
 				</ul>
 			</article>
 
@@ -108,7 +123,7 @@
 
 	    <a href="#" top>Back to top</a>
 
-		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<!--<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<script type="text/javascript">
 			$(function(){
 				var body = $('body');
@@ -128,6 +143,23 @@
 			        }
 			    });
 			});
+		</script>-->
+
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script>
+		$(function(){
+			var toggleLinks = $('a[data-toggle]');
+
+			toggleLinks.on('click', function() {
+				$(this).siblings('div').slideToggle(350);
+			});
+
+			function removeHidden(el) {
+				setTimeout(function() {
+					el.show();
+				}, 1);
+			}
+		});
 		</script>
 
 	</body>
