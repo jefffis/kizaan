@@ -186,7 +186,8 @@ header h1, header p {
 	top: 25px;
 }
 header h1 {
-	color: #FFF6C9;
+	/*color: #FFF6C9;*/
+	color: white;
 	font-size: 4em;
 	line-height: .95;
 }
@@ -196,12 +197,14 @@ header h1 a {
 }
 header h1 a {
 	border: 0;
+	color: white;
 }
 header h1 a:hover {
 	border-color: white;
 }
 header p {
-	color: #FFF6C9;
+	/*color: #FFF6C9;*/
+	color: white;
 	font-size: 1.5em;
 	margin-top: 2em;
 }
@@ -291,8 +294,11 @@ li {
 /*li > a:first-child {
 	display: block;
 }*/
-li + li {
+li:nth-child(n+2) {
 	margin-top: 1.5em;
+}
+[narrow] li:nth-child(n+2) {
+	margin-top: 2.5em;
 }
 
 [top] {
@@ -331,6 +337,7 @@ li + li {
 	/*background: rgba(0,0,0,0.01);*/
 	display: none;
 	border: 1px solid #efefef;
+	box-shadow: 0 0 0 2px rgba(0,0,0,0.01);
 	margin-top: 1.5rem;
 	/*border-radius: 3px;*/
 	/*max-height: 10000px;*/
@@ -355,6 +362,9 @@ li + li {
 	font-size: 25px;
 	letter-spacing: 1.5px;
 	text-transform: uppercase;
+}
+.hidden-text p {
+	margin-bottom: 0;
 }
 .hidden-text ol {
 	padding: 0 0 0 2.5rem;
@@ -394,7 +404,7 @@ li + li {
 hr.br {
 	background: white;
 	margin: 0;
-	height: 8px;
+	height: 16px;
 }
 .hidden-text button {
 	background: none;
@@ -418,7 +428,11 @@ hr.br {
 	box-shadow: 0 0 0 2px #FFF6C9;
 	color: #777;
 }
-
+a[target="_blank"], a[data-toggle] {
+	background: #FFF6C9;
+	line-height: 1;
+	padding: .5rem;
+}
 a[target="_blank"]:after, a[data-toggle]:after {
 	display: inline-block;
 	position: relative;
@@ -438,6 +452,11 @@ a[data-toggle]:after {
 a[data-toggle].show:after {
 	transform: rotate(180deg);
 	left: 8px;
+}
+a.details {
+	background: none;
+	box-shadow: 0 0 0 1px #efefef inset;
+	color: #111;
 }
 
 /*
