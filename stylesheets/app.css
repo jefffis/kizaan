@@ -341,17 +341,19 @@ li:nth-child(n+2) {
 .hidden-text {
 	/*background: rgba(0,0,0,0.01);*/
 	display: none;
-	/*border-left: 1px solid #efefef;*/
+	border-left: 2px solid #999;
 	/*border-top: 0;*/
 	/*box-shadow: 0 0 0 2px rgba(0,0,0,0.01);*/
 	margin-top: 1.5rem;
+	margin-left: 1.5rem;
 	/*border-radius: 3px;*/
 	/*max-height: 10000px;*/
-	/*padding-left: 1.5rem;*/
+	padding: .5rem 1.5rem;
 	position: relative;
 }
 .hidden-text.show {
 	display: block;
+	margin-bottom: 4rem;
 }
 /*.hidden-text:before {
 	content: "";
@@ -390,6 +392,15 @@ li:nth-child(n+2) {
 }
 .hidden-text .min li:nth-child(n+2) {
 	margin-top: .75rem;
+}
+.min li {
+	color: #333;
+}
+.min li:after {
+	content: ",";
+}
+.min li:last-child:after {
+	content: ".";
 }
 .hidden-text ol li:before {
 	position: absolute;
@@ -470,7 +481,7 @@ a[data-toggle]:after {
 	background-size: 10px;
 }
 a[data-toggle] {
-	text-transform: uppercase;
+	text-transform: capitalize;
 }
 a[data-toggle].show {
 /*	color: #FFF6C9;
@@ -488,6 +499,9 @@ a.details {
 	background: none;
 	/*box-shadow: 0 0 0 1px #efefef inset;*/
 	color: #111;
+}
+.br {
+	height: 10px;
 }
 
 /*

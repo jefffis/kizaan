@@ -219,27 +219,30 @@
 
 	    <a href="#" top>Back to top</a>
 
-		<!--<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-		<script type="text/javascript">
-			$(function(){
-				var body = $('body');
-			    var hdr = $('header');
-			    var hdrSticky = $('.hdr');
-			    var hdrTop = hdr.innerHeight() + 50;
-			    var win = $(window);
-			    win.scroll(function(e){
-			        var scrollTop = win.scrollTop();
-			        //console.log(hdrTop,scrollTop);
-			        if(scrollTop >= hdrTop){
-			            hdrSticky.addClass('sticky');
-						body.addClass('pad');
-			        }else if(hdrSticky.hasClass('sticky')){
-			            hdrSticky.removeClass('sticky');
-			            body.removeClass('pad');
-			        }
-			    });
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+		$(function(){
+			var toggleLinks = $('a[data-toggle]'),
+				hideToggleable = $('.hidden-text button');
+
+			toggleLinks.on('click', function() {
+				$(this).siblings('div').toggleClass('show');
+				$(this).toggleClass('show');
 			});
-		</script>-->
+
+			hideToggleable.on('click', function() {
+				$(this).parent().removeClass('show');
+				$(this).parent().parent().find('a[data-toggle]').removeClass('show');
+			});
+
+			$('header a').on('click', function() {
+				if ( $(this).hasClass('a') ) return false;
+
+				$(this).siblings().removeClass('a');
+				$(this).addClass('a');
+			});
+		});
+		</script>
 
 	</body>
 </html>
