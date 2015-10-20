@@ -211,14 +211,22 @@
 				hideToggleable = $('.hidden-text button');
 
 			toggleLinks.on('click', function() {
-				$(this).siblings('div').toggleClass('show');
-				$(this).toggleClass('show');
+				if ( $(this).hasClass('show') ) {
+					$(this).siblings('div').removeClass('show');
+					$(this).removeClass('show');
+				} else {
+					$(this).siblings('div').addClass('show');
+					$(this).addClass('show');
+					$('html, body').animate({
+						scrollTop : $(this).parent().find('div').offset().top - 15
+					}, 500);
+				}
 			});
 
-			hideToggleable.on('click', function() {
-				$(this).parent().removeClass('show');
-				$(this).parent().parent().find('a[data-toggle]').removeClass('show');
-			});
+			// hideToggleable.on('click', function() {
+			// 	$(this).parent().removeClass('show');
+			// 	$(this).parent().parent().find('a[data-toggle]').removeClass('show');
+			// });
 
 			$('header a').on('click', function() {
 				if ( $(this).hasClass('show') ) return false;
