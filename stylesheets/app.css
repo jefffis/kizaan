@@ -212,6 +212,11 @@ header a, header strong {
 	color: #FFF6C9;
 	font-weight: normal;
 }
+header .a {
+	text-decoration: none;
+	opacity: .5;
+	cursor: default;
+}
 [intro] {
 	font-size: 2.25em;
 	line-height: 1.2;
@@ -336,18 +341,19 @@ li:nth-child(n+2) {
 .hidden-text {
 	/*background: rgba(0,0,0,0.01);*/
 	display: none;
-	border: 1px solid #efefef;
-	box-shadow: 0 0 0 2px rgba(0,0,0,0.01);
+	/*border-left: 1px solid #efefef;*/
+	/*border-top: 0;*/
+	/*box-shadow: 0 0 0 2px rgba(0,0,0,0.01);*/
 	margin-top: 1.5rem;
 	/*border-radius: 3px;*/
 	/*max-height: 10000px;*/
-	padding: 1.5rem;
+	/*padding-left: 1.5rem;*/
 	position: relative;
 }
 .hidden-text.show {
 	display: block;
 }
-.hidden-text:before {
+/*.hidden-text:before {
 	content: "";
 	display: inline-block;
 	position: absolute;
@@ -356,7 +362,7 @@ li:nth-child(n+2) {
 	border-bottom: 10px solid #efefef;
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
-}
+}*/
 .hidden-text h3 {
 	/*color: #111;*/
 	font-size: 25px;
@@ -369,7 +375,10 @@ li:nth-child(n+2) {
 .hidden-text ol {
 	padding: 0 0 0 2.5rem;
 }
-.hidden-text li {
+.hidden-text ul {
+	padding: 0;
+}
+.hidden-text ol li {
 	/*list-style: decimal;*/
 	counter-increment: this;
 	background: none;
@@ -379,7 +388,10 @@ li:nth-child(n+2) {
 .hidden-text li:nth-child(n+2) {
 	margin-top: 4rem;
 }
-.hidden-text li:before {
+.hidden-text .min li:nth-child(n+2) {
+	margin-top: .75rem;
+}
+.hidden-text ol li:before {
 	position: absolute;
 	left: -2.25rem;
 	top: -1px;
@@ -410,7 +422,7 @@ hr.br {
 	background: none;
 	border: 0;
 	color: #111;
-	text-align: right;
+	text-align: left;
 	width: 100%;
 	display: block;
 	margin-top: 1rem;
@@ -433,6 +445,14 @@ a[target="_blank"], a[data-toggle] {
 	line-height: 1;
 	padding: .5rem;
 }
+a[data-toggle] {
+	text-decoration: none;
+}
+a.no-style, .hidden-text a {
+	background: none;
+	padding: 0;
+	line-height: inherit;
+}
 a[target="_blank"]:after, a[data-toggle]:after {
 	display: inline-block;
 	position: relative;
@@ -449,13 +469,24 @@ a[data-toggle]:after {
 	background-image: url(https://cdn0.iconfinder.com/data/icons/glyphpack/26/double-arrow-down-128.png);
 	background-size: 10px;
 }
+a[data-toggle] {
+	text-transform: uppercase;
+}
+a[data-toggle].show {
+/*	color: #FFF6C9;
+	background: #0B344A;*/
+	/*opacity: .65;*/
+}
 a[data-toggle].show:after {
 	transform: rotate(180deg);
 	left: 8px;
 }
+a.no-style:after, .hidden-text a:after {
+	display: none;
+}
 a.details {
 	background: none;
-	box-shadow: 0 0 0 1px #efefef inset;
+	/*box-shadow: 0 0 0 1px #efefef inset;*/
 	color: #111;
 }
 
