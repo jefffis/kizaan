@@ -387,6 +387,9 @@ li:nth-child(n+2) {
 .hidden-text p {
 	margin-bottom: 0;
 }
+.hidden-text .mar-bot {
+	margin-bottom: 1rem;
+}
 .hidden-text ol {
 	padding: 0 0 0 2.5rem;
 }
@@ -711,7 +714,7 @@ header h1 {
 	font-size: 45px;
 }
 header p {
-	font-size: 20px;	
+	font-size: 20px;
 }
 .dets {
 	padding-top: 3rem;
